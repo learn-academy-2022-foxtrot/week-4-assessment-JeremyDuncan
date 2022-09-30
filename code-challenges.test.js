@@ -209,9 +209,56 @@ const getTotalVotes = (obj) => {
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // a) Create a test with an expect statement using the variables provided.
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-const dataArray1 = ["array", "object", "number", "string", "Boolean"];
-const dataArray2 = ["string", "null", "Boolean", "string", "undefined"];
-// Expected output: ["array", "object", "number", "string", "Boolean", "null", "undefined"]
+describe("getOneSet", () => {
+  it("returns one array with no duplicate values", () => {
+    //=== Provided Test Cases ===
+    const dataArray1 = ["array", "object", "number", "string", "Boolean"];
+    const dataArray2 = ["string", "null", "Boolean", "string", "undefined"];
+
+    //=== Expected Test Results ===
+    const expected1 = [
+      "array",
+      "object",
+      "number",
+      "string",
+      "Boolean",
+      "null",
+      "undefined",
+    ];
+
+    expect(getOneSet(dataArray1, dataArray2)).toEqual(expected1);
+  });
+});
+
+//---------------------||❌ Initial Test Results ❌||---------------------------
+// FAIL  ./code-challenges.test.js
+// removeAndShuffle
+//   ✓ Removes first item in array and shuffles the remaining content (3 ms)
+// getTotalVotes
+//   ✓ returns the net total of votes
+// getOneSet
+//   ✕ returns one array with no duplicate values
+
+// ● getOneSet › returns one array with no duplicate values
+
+//   ReferenceError: getOneSet is not defined
+
+//     227 |     ];
+//     228 |
+//   > 229 |     expect(getOneSet(dataArray1, dataArray2)).toEqual(expected1);
+//         |     ^
+//     230 |   });
+//     231 | });
+//     232 |
+
+//     at Object.expect (code-challenges.test.js:229:5)
+
+// Test Suites: 1 failed, 1 total
+// Tests:       1 failed, 2 passed, 3 total
+// Snapshots:   0 total
+// Time:        0.209 s, estimated 1 s
+// Ran all test suites.
+//------------------------------------------------------------------------------
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // b) Create the function that makes the test pass.
