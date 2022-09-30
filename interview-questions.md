@@ -32,7 +32,16 @@ Researched answer:
 2. What is the difference between a Float and an Integer in Ruby?
 
 Your answer:
+* Float is a floating point number, meaning that it is number with a decimal 
+place. Its more precise to use a Float for arithmetic operations.
+  * Example: 1.5, 3.55, .003
+  * Arithmetic Example: 7/2 = 3.5
 
+* An Integer is a whole number and is less accurate when doing arithmetic 
+operations due to numbers that may return decimal number being rounded down to 
+the nearest whole number
+  * Example: 1, 2, 3, 4, 5, -10
+  * Arithmetic Example: 7/2 = 3 
 Researched answer:
 
 ---
