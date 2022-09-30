@@ -42,6 +42,7 @@ operations due to numbers that may return decimal number being rounded down to
 the nearest whole number
   * Example: 1, 2, 3, 4, 5, -10
   * Arithmetic Example: 7/2 = 3 
+
 Researched answer:
 
 ---
@@ -49,6 +50,8 @@ Researched answer:
 3. Ruby has an implicit return. What does that mean?
 
 Your answer:
+* This means that ruby will return the last line in a method or conditional even 
+though there is no "return" in the method.
 
 Researched answer:
 
