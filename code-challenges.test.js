@@ -263,3 +263,37 @@ describe("getOneSet", () => {
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // b) Create the function that makes the test pass.
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// I decided to to take advantage of the spread operator and the Set object.
+// It's a bit cheaty as there are more drawn out ways to complete this but..🤷‍♂️
+
+// I used a Set object since you cannot have duplicate values in a Set object.
+// I then use the spread operator to turn the Set object into an array. 🫱💨
+//                                                                         🎤
+const getOneSet = (arr1, arr2) => {
+  return [...new Set([...arr1, ...arr2])];
+};
+
+const dataArray1 = ["array", "object", "number", "string", "Boolean"];
+const dataArray2 = ["string", "null", "Boolean", "string", "undefined"];
+
+getOneSet(dataArray1, dataArray2);
+
+//--------------------||✅ Final Test Results ✅||------------------------------
+// PASS  ./code-challenges.test.js
+// removeAndShuffle
+//   ✓ Removes first item in array and shuffles the remaining content (1 ms)
+// getTotalVotes
+//   ✓ returns the net total of votes
+// getOneSet
+//   ✓ returns one array with no duplicate values
+
+// Test Suites: 1 passed, 1 total
+// Tests:       3 passed, 3 total
+// Snapshots:   0 total
+// Time:        0.19 s, estimated 1 s
+// Ran all test suites.
+// ✨  Done in 0.53s.
+//------------------------------------------------------------------------------
+
+//******************************************************************************
