@@ -2,6 +2,34 @@
 # MINASWAN ✌️ ------------------------------------------------------------------
 
 #*******************************************************************************
+# I decided to create a custom test method to test all the completed challenges
+# I realize I could use RSpec for this, (or not do it at all..) but thought I'd 
+# make it interesting and create a method that could test for me.
+#====================🧪 assertEqual test method 🧪 =============================
+#*******************************************************************************
+
+# takes function to be tested as input (actual)..  
+# compares it against the expected outcome (expected)..
+# and describes the test (describeTest)
+
+# Will output TEST PASSED if the Tested Function equals the Expected Output.
+# Will output FAILED, the Expected Output, and results of Tested Function if
+# Tested Function's return does not equal Expected Output
+
+# This function will be called for each test case in the Test Cases section of 
+# each Challenge.
+
+def assertEqual(actual, expected, describeTest)
+  if actual === expected 
+    puts "✅ TEST PASSED ==> 🧪#{describeTest}"
+  else 
+    puts "❌ FAILED: 🧪#{describeTest}, 
+    🤰 expected 👉 '#{expected}', 
+    🔴 but got 🤦 '#{actual}'." 
+  end
+end
+
+#*******************************************************************************
 # --------------------1)👉 Create a method that takes in a number and determines 
 # if the number is even or odd. Use the test variables provided.
 #*******************************************************************************
