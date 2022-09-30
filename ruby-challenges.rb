@@ -33,6 +33,12 @@ end
 # --------------------1)👉 Create a method that takes in a number and determines 
 # if the number is even or odd. Use the test variables provided.
 #*******************************************************************************
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~Method Explanation~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# I used the even? method to determine if the number was even instead of using
+# modulus. If even? returns true, then return number is even, else return
+# number is odd.
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 def determine_odd_or_even(num)
   if num.even?
     "#{num} is even"
@@ -86,11 +92,13 @@ assertEqual(determine_odd_or_even(num3),
 # https://ruby-doc.org/core-2.6/String.html#method-i-delete
 #*******************************************************************************
 
+#~~~~~~~~~~~~~~~~~~~~~~~~~Method Explanation~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# I used the delete! method to mutate the string and remove all vowels by 
+# passing all vowels, upper and lowercase as an argument
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 def removeVowels(string)
   string.delete!("aeiouAEIUO") 
 end
-
-
 
 #---------------------------Test Cases------------------------------------------
 # Challenege 2, Test 1
@@ -142,11 +150,20 @@ assertEqual(removeVowels(beatles_album3),
 # backward. Use the test variables provided.
 #*******************************************************************************
 
+#~~~~~~~~~~~~~~~~~~~~~~~~~Method Explanation~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# I used the downcase method to account for capital letter edgecases, then used
+# the reverse method to reverse the letters of one string..
+# then compare the non-reverses string with the reversed string.
+# if non-reverse string equals reverse string then return it is a palindrome
+# else return not a palindrome 
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 def palindrome_checker(string)
-
+  if string.downcase === string.downcase.reverse
+    "#{string} is a palindrome"
+  else
+    "#{string} is not a palindrome"
+  end
 end
-
-
 
 #---------------------------Tests Cases-----------------------------------------
 # Challenege 3, Test 1
@@ -184,4 +201,16 @@ assertEqual(palindrome_checker(palindrome_tester3),
 # ❌ FAILED: 🧪Determines if palindrome, 
 #     🤰 expected 👉 'Rotator is a palindrome', 
 #     🔴 but got 🤦 ''.
+#-------------------------------------------------------------------------------
+#--------------------||✅ Final Test Results ✅||------------------------------
+# ruby-challenges.rb
+# ✅ TEST PASSED ==> 🧪Determines if odd of even
+# ✅ TEST PASSED ==> 🧪Determines if odd of even
+# ✅ TEST PASSED ==> 🧪Determines if odd of even
+# ✅ TEST PASSED ==> 🧪Remove all vowels
+# ✅ TEST PASSED ==> 🧪Remove all vowels
+# ✅ TEST PASSED ==> 🧪Remove all vowels
+# ✅ TEST PASSED ==> 🧪Determines if palindrome
+# ✅ TEST PASSED ==> 🧪Determines if palindrome
+# ✅ TEST PASSED ==> 🧪Determines if palindrome
 #-------------------------------------------------------------------------------
