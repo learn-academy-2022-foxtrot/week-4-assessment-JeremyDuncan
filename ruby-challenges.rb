@@ -2,10 +2,10 @@
 # MINASWAN ✌️ ------------------------------------------------------------------
 
 #*******************************************************************************
+#====================🧪 assertEqual test method 🧪 =============================
 # I decided to create a custom test method to test all the completed challenges
 # I realize I could use RSpec for this, (or not do it at all..) but thought I'd 
 # make it interesting and create a method that could test for me.
-#====================🧪 assertEqual test method 🧪 =============================
 #*******************************************************************************
 
 # takes function to be tested as input (actual)..  
@@ -34,7 +34,11 @@ end
 # if the number is even or odd. Use the test variables provided.
 #*******************************************************************************
 def determine_odd_or_even(num)
-
+  if num.even?
+    "#{num} is even"
+  else 
+    "#{num} is odd"
+  end
 end
 
 #---------------------------Test Cases------------------------------------------
@@ -57,7 +61,7 @@ assertEqual(determine_odd_or_even(num3),
 'Determines if odd of even')
 
 #---------------------||❌ Initial Test Results ❌||----------------------------
-# ruby-challenges.rb"
+# ruby-challenges.rb
 # ❌ FAILED: 🧪Determines if odd of even, 
 #     🤰 expected 👉 '7 is odd', 
 #     🔴 but got 🤦 ''.
@@ -67,6 +71,12 @@ assertEqual(determine_odd_or_even(num3),
 # ❌ FAILED: 🧪Determines if odd of even, 
 #     🤰 expected 👉 '221 is odd', 
 #     🔴 but got 🤦 ''.
+#-------------------------------------------------------------------------------
+#--------------------||✅ Final Test Results ✅||------------------------------
+# ruby-challenges.rb
+# ✅ TEST PASSED ==> 🧪Determines if odd of even
+# ✅ TEST PASSED ==> 🧪Determines if odd of even
+# ✅ TEST PASSED ==> 🧪Determines if odd of even
 #-------------------------------------------------------------------------------
 
 #*******************************************************************************
