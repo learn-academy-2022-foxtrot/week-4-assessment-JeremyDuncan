@@ -70,7 +70,20 @@ Researched answer:
 5. How do you extract a value in a Ruby hash?
 
 Your answer:
+* Similar to JavaScript with Key:Value pairs, you would use the key in 
+conjuction with the hash you were trying to obtain the value from with backet
+notation.
+  * If you were using a symbol for a key, you would have to add the ":" in front 
+of the key. 
+  * Keys can be any datatype.. such as strings, hashes, floats, integers, arrays 
+  and so-on.
+  
+* Example: 
+```ruby 
+this_hash = {cherry: 'A small red fruit', jalapeno: 'A spicey addition to any dish'}
 
+p this_hash[:cherry] # 'A small red fruit'
+```
 Researched answer:
 
 ---
