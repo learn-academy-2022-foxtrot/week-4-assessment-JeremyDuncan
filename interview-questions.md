@@ -60,6 +60,8 @@ Researched answer:
 4. What is a block in Ruby?
 
 Your answer:
+* A block is an anonymouse section of code that performs a given task.
+* Blocks can be inside Methods to allow being called mutliple times.
 
 Researched answer:
 
