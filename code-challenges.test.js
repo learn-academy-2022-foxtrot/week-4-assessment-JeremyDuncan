@@ -128,12 +128,12 @@ const removeAndShuffle = (arr) => {
 //------------------------------------------------------------------------------
 
 //******************************************************************************
-// --------------------2) Create a function that takes in an object that
+// --------------------2)👉 Create a function that takes in an object that
 // contains up votes and down votes and returns the net total of votes.
 //******************************************************************************
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-// a) Create a test with expect statements for each of the variables provided.
+// a)🧪 Create a test with expect statements for each of the variables provided.
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 describe("getTotalVotes", () => {
@@ -176,7 +176,7 @@ describe("getTotalVotes", () => {
 //------------------------------------------------------------------------------
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-// b) Create the function that makes the test pass.
+// b)👨‍💻 Create the function that makes the test pass.
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // create function that takes object input..
 // then accesses the value of the upVote and downVote keys..
@@ -201,13 +201,13 @@ const getTotalVotes = (obj) => {
 //------------------------------------------------------------------------------
 
 //******************************************************************************
-// --------------------3) Create a function that takes in two arrays as
+// --------------------3)👉 Create a function that takes in two arrays as
 // arguments and returns one array with no duplicate values. STRETCH: Use the
 // spread operator to pass in a dynamic number of arguments.
 //******************************************************************************
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-// a) Create a test with an expect statement using the variables provided.
+// a)🧪 Create a test with an expect statement using the variables provided.
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 describe("getOneSet", () => {
   it("returns one array with no duplicate values", () => {
@@ -261,7 +261,7 @@ describe("getOneSet", () => {
 //------------------------------------------------------------------------------
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-// b) Create the function that makes the test pass.
+// b)👨‍💻 Create the function that makes the test pass.
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 // I decided to to take advantage of the spread operator and the Set object.
