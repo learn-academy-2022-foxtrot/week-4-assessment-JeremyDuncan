@@ -142,9 +142,46 @@ assertEqual(removeVowels(beatles_album3),
 # backward. Use the test variables provided.
 #*******************************************************************************
 
+def palindrome_checker(string)
+
+end
+
+
+
+#---------------------------Tests Cases-----------------------------------------
+# Challenege 3, Test 1
 palindrome_tester1 = 'Racecar'
-# Expected output: 'Racecar is a palindrome'
+assertEqual(palindrome_checker(palindrome_tester1), 
+'Racecar is a palindrome', 
+'Determines if palindrome')
+
+# Challenege 3, Test 2
 palindrome_tester2 = 'LEARN'
-# Expected output: 'LEARN is not a palindrome'
+assertEqual(palindrome_checker(palindrome_tester2), 
+'LEARN is not a palindrome', 
+'Determines if palindrome')
+
+# Challenege 3, Test 3
 palindrome_tester3 = 'Rotator'
-# Expected output: 'Rotator is a palindrome'
+assertEqual(palindrome_checker(palindrome_tester3), 
+'Rotator is a palindrome', 
+'Determines if palindrome')
+
+#---------------------||❌ Initial Test Results ❌||----------------------------
+# ruby-challenges.rb
+# ✅ TEST PASSED ==> 🧪Determines if odd of even
+# ✅ TEST PASSED ==> 🧪Determines if odd of even
+# ✅ TEST PASSED ==> 🧪Determines if odd of even
+# ✅ TEST PASSED ==> 🧪Remove all vowels
+# ✅ TEST PASSED ==> 🧪Remove all vowels
+# ✅ TEST PASSED ==> 🧪Remove all vowels
+# ❌ FAILED: 🧪Determines if palindrome, 
+#     🤰 expected 👉 'Racecar is a palindrome', 
+#     🔴 but got 🤦 ''.
+# ❌ FAILED: 🧪Determines if palindrome, 
+#     🤰 expected 👉 'LEARN is not a palindrome', 
+#     🔴 but got 🤦 ''.
+# ❌ FAILED: 🧪Determines if palindrome, 
+#     🤰 expected 👉 'Rotator is a palindrome', 
+#     🔴 but got 🤦 ''.
+#-------------------------------------------------------------------------------
