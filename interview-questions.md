@@ -14,7 +14,17 @@ learn. Write your researched answer in your OWN WORDS.
 programming?
 
 Your answer:
+* OOP is programming using Objects. This approach involves thinking in a way as 
+we would in normal day to day life.
+  * Example: Dog Class, Cat Class, Bunny Class 
 
+* This entails having Classes which provide the layout of Attributes and 
+Behaviors an Object will have when it is constructed from a Class.
+* Class can be used to created multiple Objects from it's class
+  * Objects can have different data such as a different name, as long as it
+  follows the constructors of the Class it was created from. 
+  * Modules can be used to add other functionality to created objects that may 
+  necesarilly be a normal Attribute or Behavior of that class.
 Researched answer:
 
 ---
