@@ -33,15 +33,41 @@ end
 # --------------------1)👉 Create a method that takes in a number and determines 
 # if the number is even or odd. Use the test variables provided.
 #*******************************************************************************
+def determine_odd_or_even(num)
 
-num1 = 7
-# Expected output: '7 is odd'
+end
+
+#---------------------------Test Cases------------------------------------------
+# Challenege 1, Test 1                    # ---👇Test Explanation👇 ---
+num1 = 7                                  # <== Test Input Variable
+assertEqual(determine_odd_or_even(num1),  # <== Method Tested
+'7 is odd',                               # <== Expected Output
+'Determines if odd of even')              # <== Test Description
+
+# Challenege 1, Test 2
 num2 = 42
-# Expected output: '42 is even'
+assertEqual(determine_odd_or_even(num2), 
+'42 is even', 
+'Determines if odd of even')
+
+# Challenege 1, Test 3
 num3 = 221
-# Expected output: '221 is odd'
+assertEqual(determine_odd_or_even(num3), 
+'221 is odd', 
+'Determines if odd of even')
 
-
+#---------------------||❌ Initial Test Results ❌||----------------------------
+# ruby-challenges.rb"
+# ❌ FAILED: 🧪Determines if odd of even, 
+#     🤰 expected 👉 '7 is odd', 
+#     🔴 but got 🤦 ''.
+# ❌ FAILED: 🧪Determines if odd of even, 
+#     🤰 expected 👉 '42 is even', 
+#     🔴 but got 🤦 ''.
+# ❌ FAILED: 🧪Determines if odd of even, 
+#     🤰 expected 👉 '221 is odd', 
+#     🔴 but got 🤦 ''.
+#-------------------------------------------------------------------------------
 
 #*******************************************************************************
 # -------------------2)👉 Create a method that takes in a string and removes all 
