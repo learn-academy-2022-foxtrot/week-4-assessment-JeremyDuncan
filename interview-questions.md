@@ -17,15 +17,30 @@ Your answer:
 * OOP is programming using Objects. This approach involves thinking in a way as 
 we would in normal day to day life.
   * Example: Dog Class, Cat Class, Bunny Class 
-
 * This entails having Classes which provide the layout of Attributes and 
 Behaviors an Object will have when it is constructed from a Class.
 * Class can be used to created multiple Objects from it's class
   * Objects can have different data such as a different name, as long as it
   follows the constructors of the Class it was created from. 
   * Modules can be used to add other functionality to created objects that may 
-  necesarilly be a normal Attribute or Behavior of that class.
+  necessarily be a normal Attribute or Behavior of that class.
+
+* Functional programing would not rely on Objects, but on functions calls 
+instead.
+
 Researched answer:
+* According to: https://en.wikipedia.org/wiki/Functional_programming:
+  * Functional programming follows th paradigm where programs are created     
+  with functions. 
+  * Some languages that take advantage of Functional programming include:
+    * JavaScript, C++, Kotlin, Python, Java, Rust, Perl, Go, and C#. 
+
+* According to: https://en.wikipedia.org/wiki/Object-oriented_programming:
+  * Object-Oriented programming is centered around "Objects" which can hold code
+  and data.
+  * Some of the languages that take advantage of OOP include:
+    * JavaScript, Java, Python, C#, C++, Ruby, Swift, Kotlin, and Perl.
+
 
 ---
 <!-- ----------------------------------------------------------------------- -->
@@ -60,8 +75,8 @@ Researched answer:
 4. What is a block in Ruby?
 
 Your answer:
-* A block is an anonymouse section of code that performs a given task.
-* Blocks can be inside Methods to allow being called mutliple times.
+* A block is an anonymous section of code that performs a given task.
+* Blocks can be inside Methods to allow being called multiple times.
 
 Researched answer:
 
@@ -71,7 +86,8 @@ Researched answer:
 
 Your answer:
 * Similar to JavaScript with Key:Value pairs, you would use the key in 
-conjuction with the hash you were trying to obtain the value from with backet
+conjunction with the hash you were trying to obtain the value from with 
+bracket
 notation.
   * If you were using a symbol for a key, you would have to add the ":" in front 
 of the key. 
@@ -120,7 +136,7 @@ acronym used in the miliary.
 
 4. Active Record:
 * According to: https://guides.rubyonrails.org/active_record_basics.html:
-  * Active Record is the Model in "MVC" thats responisble for the representing the data and logic. 
+  * Active Record is the Model in "MVC" thats responsible for the representing the data and logic. 
   * It's used to help create and use data in objects that require persistent
   storage.
 ---
