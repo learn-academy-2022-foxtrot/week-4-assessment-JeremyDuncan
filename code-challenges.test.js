@@ -18,12 +18,12 @@
 // --------------------1)👉Create a function that takes in an array, removes the
 // first item from the array and shuffles the remaining content.
 //******************************************************************************
+
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // a))🧪 Create a test with an expect statement using the variable provided.
 // HINT: Check out this resource:
 // https://jestjs.io/docs/expect#expectarraycontainingarray
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 describe("removeAndShuffle", () => {
   it("Removes first item in array and shuffles the remaining content", () => {
     //=== Provided Test Cases ===
@@ -130,14 +130,49 @@ const removeAndShuffle = (arr) => {
 // --------------------2) Create a function that takes in an object that
 // contains up votes and down votes and returns the net total of votes.
 //******************************************************************************
+
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // a) Create a test with expect statements for each of the variables provided.
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-const votes1 = { upVotes: 13, downVotes: 2 };
-// Expected output: 11
-const votes2 = { upVotes: 2, downVotes: 33 };
-// Expected output: -31
+describe("getTotalVotes", () => {
+  it("returns the net total of votes", () => {
+    //=== Provided Test Cases ===
+    const votes1 = { upVotes: 13, downVotes: 2 };
+    const votes2 = { upVotes: 2, downVotes: 33 };
+
+    //=== Expected Test Results ===
+    const expected1 = 11;
+    const expected2 = -31;
+
+    expect(getTotalVotes(votes1)).toEqual(expected1);
+    expect(getTotalVotes(votes2)).toEqual(expected2);
+  });
+});
+
+//---------------------||❌ Initial Test Results ❌||---------------------------
+// RUNS  ./code-challenges.test.js
+// ● getTotalVotes › returns the net total of votes
+
+//   ReferenceError: getTotalVotes is not defined
+
+//     146 |     const expected2 = -31;
+//     147 |
+//   > 148 |     expect(getTotalVotes(votes1)).toEqual(expected1);
+//         |     ^
+//     149 |     expect(getTotalVotes(votes2)).toEqual(expected2);
+//     150 |   });
+//     151 | });
+
+//     at Object.expect (code-challenges.test.js:148:5)
+
+// RUNS  ./code-challenges.test.js
+// Test Suites: 1 failed, 1 total
+// Tests:       1 failed, 1 passed, 2 total
+// Snapshots:   0 total
+// Time:        0.21 s, estimated 1 s
+// Ran all test suites.
+//------------------------------------------------------------------------------
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // b) Create the function that makes the test pass.
@@ -148,6 +183,7 @@ const votes2 = { upVotes: 2, downVotes: 33 };
 // arguments and returns one array with no duplicate values. STRETCH: Use the
 // spread operator to pass in a dynamic number of arguments.
 //******************************************************************************
+
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // a) Create a test with an expect statement using the variables provided.
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
