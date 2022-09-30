@@ -77,7 +77,7 @@ notation.
 of the key. 
   * Keys can be any datatype.. such as strings, hashes, floats, integers, arrays 
   and so-on.
-  
+
 * Example: 
 ```ruby 
 this_hash = {cherry: 'A small red fruit', jalapeno: 'A spicey addition to any dish'}
@@ -91,11 +91,44 @@ Researched answer:
 ## Looking Ahead: Terms for Next Week
 
 1. PostgreSQL:
+* PostgresSQL is a relational database manager that uses the SQL language. 
+* According to: https://www.postgresql.org/ :
+  * PostgreSQL is the world's most advanced open .source relational database. It 
+goes on to say its an Object- Relational database that extends the SQL language
+with a rubust collection of features and security.   
+---
 
 2. Ruby on Rails:
+* This is used in the backend on for rapid deployment of web applications.
+* According to: https://rubyonrails.org/ :
+  * Rails is a full-stack framework utilizes the Ruby language and has tools for
+   the front and backend.
+  * It is used to make programming web applications easier and allows developers
+  to write less code to accomplish more.
+  * It's an opinionated software which means it has it's best practices in which
+  it will follow to complete a task.
+--- 
 
-3. ORM:
+3. ORM: 
+* My first instinct is to say Operational Risk Management, but thats a 
+acronym used in the miliary.
+* According to https://blog.bitsrc.io/what-is-an-orm-and-why-you-should-use-it-b2b6f75f5e2a:
+  * ORM stands for Object-Relational-Mappers 
+  * ORM allows you to write SQL queries through Object Oriented languages like 
+  Ruby or JavaScript.
+---  
 
 4. Active Record:
+* According to: https://guides.rubyonrails.org/active_record_basics.html:
+  * Active Record is the Model in "MVC" thats responisble for the representing the data and logic. 
+  * It's used to help create and use data in objects that require persistent
+  storage.
+---
 
 5. Migrations:
+* According to: https://guides.rubyonrails.org/active_record_migrations.html:
+  * Migrations are easy ways to alter database schemas over time consistently. 
+  * Takes advantage of the Ruby language to do the heavy lifting so the developers
+  does not have to write SQL.
+  * Allows schema and changes to database to be independent.
+  * Each migration is a new version of the database.
