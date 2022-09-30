@@ -86,14 +86,46 @@ assertEqual(determine_odd_or_even(num3),
 # https://ruby-doc.org/core-2.6/String.html#method-i-delete
 #*******************************************************************************
 
-beatles_album1 = 'Rubber Soul'
-# Expected output: 'Rbbr Sl'
+def removeVowels(string)
+   
+end
+
+
+
+#---------------------------Test Cases------------------------------------------
+# Challenege 2, Test 1
+beatles_album1 = 'Rubber Soul'            
+assertEqual(removeVowels(beatles_album1), 
+'Rbbr Sl',                                 
+'Remove all vowels')                       
+
+# Challenege 2, Test 2
 beatles_album2 = 'Sgt Pepper'
-# Expected output: 'Sgt Pppr'
+assertEqual(removeVowels(beatles_album2), 
+'Sgt Pppr', 
+'Remove all vowels')
+
+# Challenege 2, Test 3
 beatles_album3 = 'Abbey Road'
-# Expected output: 'bby Rd'
+assertEqual(removeVowels(beatles_album3), 
+'bby Rd', 
+'Remove all vowels')
 
-
+#---------------------||❌ Initial Test Results ❌||----------------------------
+# ruby-challenges.rb
+# ✅ TEST PASSED ==> 🧪Determines if odd of even
+# ✅ TEST PASSED ==> 🧪Determines if odd of even
+# ✅ TEST PASSED ==> 🧪Determines if odd of even
+# ❌ FAILED: 🧪Remove all vowels, 
+#     🤰 expected 👉 'Rbbr Sl', 
+#     🔴 but got 🤦 ''.
+# ❌ FAILED: 🧪Remove all vowels, 
+#     🤰 expected 👉 'Sgt Pppr', 
+#     🔴 but got 🤦 ''.
+# ❌ FAILED: 🧪Remove all vowels, 
+#     🤰 expected 👉 'bby Rd', 
+#     🔴 but got 🤦 ''.
+#-------------------------------------------------------------------------------
 
 #*******************************************************************************
 # -------------------3)👉 Create a method that takes in a string and checks if 
