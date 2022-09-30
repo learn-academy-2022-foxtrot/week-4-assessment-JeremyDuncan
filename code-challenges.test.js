@@ -89,10 +89,12 @@ const removeAndShuffle = (arr) => {
   // creates a new Array with first value removed
   const filtered = arr.filter((color, index) => index !== 0);
 
-  // create index based on filtred array length minus 1
+  // create index based on filtered array length minus 1
+  // I realized I could have done this inside the for-loop, but decided to do it
+  // this way to help make the steps more clear for comments and understanding
   let i = filtered.length - 1;
 
-  // loop through filtered array and decrease index every count
+  // loop through filtered array and decrease index every count by one
   for (i; i > 0; i--) {
     // create random index value and asign it to randomIndex variable
     const randomIndex = Math.floor(Math.random() * (i + 1));
@@ -108,7 +110,6 @@ const removeAndShuffle = (arr) => {
     // location of the random index value
     filtered[randomIndex] = tempValue;
   }
-
   // return the filtered and shuffled array
   return filtered;
 };
@@ -177,6 +178,27 @@ describe("getTotalVotes", () => {
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // b) Create the function that makes the test pass.
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// create function that takes object input..
+// then accesses the value of the upVote and downVote keys..
+// them return the value of upVote numbers minus downVote numbers
+const getTotalVotes = (obj) => {
+  return obj.upVotes - obj.downVotes;
+};
+
+//--------------------||✅ Final Test Results ✅||------------------------------
+// PASS  ./code-challenges.test.js
+// removeAndShuffle
+//   ✓ Removes first item in array and shuffles the remaining content (1 ms)
+// getTotalVotes
+//   ✓ returns the net total of votes (2 ms)
+
+// Test Suites: 1 passed, 1 total
+// Tests:       2 passed, 2 total
+// Snapshots:   0 total
+// Time:        0.194 s, estimated 1 s
+// Ran all test suites.
+// ✨  Done in 0.68s.
+//------------------------------------------------------------------------------
 
 //******************************************************************************
 // --------------------3) Create a function that takes in two arrays as
