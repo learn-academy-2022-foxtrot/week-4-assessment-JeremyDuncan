@@ -87,7 +87,7 @@ assertEqual(determine_odd_or_even(num3),
 #*******************************************************************************
 
 def removeVowels(string)
-   
+  string.delete!("aeiouAEIUO") 
 end
 
 
@@ -125,6 +125,15 @@ assertEqual(removeVowels(beatles_album3),
 # ❌ FAILED: 🧪Remove all vowels, 
 #     🤰 expected 👉 'bby Rd', 
 #     🔴 but got 🤦 ''.
+#-------------------------------------------------------------------------------
+#--------------------||✅ Final Test Results ✅||------------------------------
+# ruby-challenges.rb
+# ✅ TEST PASSED ==> 🧪Determines if odd of even
+# ✅ TEST PASSED ==> 🧪Determines if odd of even
+# ✅ TEST PASSED ==> 🧪Determines if odd of even
+# ✅ TEST PASSED ==> 🧪Remove all vowels
+# ✅ TEST PASSED ==> 🧪Remove all vowels
+# ✅ TEST PASSED ==> 🧪Remove all vowels
 #-------------------------------------------------------------------------------
 
 #*******************************************************************************
