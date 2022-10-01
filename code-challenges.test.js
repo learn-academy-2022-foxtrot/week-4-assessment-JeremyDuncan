@@ -85,6 +85,9 @@ describe("removeAndShuffle", () => {
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // b)👨‍💻 Create the function that makes the test pass.
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+//------------------------*** Initial Version ***-------------------------------
+/*
 const removeAndShuffle = (arr) => {
   // creates a new Array with first value removed
   const filtered = arr.filter((color, index) => index !== 0);
@@ -113,6 +116,26 @@ const removeAndShuffle = (arr) => {
   // return the filtered and shuffled array
   return filtered;
 };
+*/
+//------------------------------------------------------------------------------
+
+//-----------------*** This is a refactored version ***-------------------------
+// I decided to use the shift method since I was just removing the first index.
+// I also decided to change the index variable names to make the code easier to
+// understand since I'm using random index values in conjunction with current
+// index values per iterations when I utilize them to swap values.
+//------------------------------------------------------------------------------
+const removeAndShuffle = (arr) => {
+  arr.shift();
+  for (let currentIndex = arr.length - 1; currentIndex > 0; currentIndex--) {
+    const randomIndex = Math.floor(Math.random() * (currentIndex + 1));
+    const tempValue = arr[currentIndex];
+    arr[currentIndex] = arr[randomIndex];
+    arr[randomIndex] = tempValue;
+  }
+  return arr;
+};
+//------------------------------------------------------------------------------
 
 //--------------------||✅ Final Test Results ✅||------------------------------
 // PASS  ./code-challenges.test.js
@@ -180,7 +203,7 @@ describe("getTotalVotes", () => {
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // create function that takes object input..
 // then accesses the value of the upVote and downVote keys..
-// them return the value of upVote numbers minus downVote numbers
+// then return the value of upVote numbers minus downVote numbers
 const getTotalVotes = (obj) => {
   return obj.upVotes - obj.downVotes;
 };
@@ -214,9 +237,6 @@ describe("getOneSet", () => {
     //=== Provided Test Cases ===
     const dataArray1 = ["array", "object", "number", "string", "Boolean"];
     const dataArray2 = ["string", "null", "Boolean", "string", "undefined"];
-    const dataArray3 = ["string", "null", "Boolean", "string", "undefined"];
-    const dataArray4 = ["array", "object", "number", "string", "Boolean"];
-    const dataArray5 = [23, 44, 55, 66, 66, 55, 23, 23, 4, 4, 6, 7, 8, 1, 3];
     //=== Expected Test Results ===
     const expected1 = [
       "array",
@@ -228,30 +248,7 @@ describe("getOneSet", () => {
       "undefined",
     ];
 
-    const expected2 = [
-      "array",
-      "object",
-      "number",
-      "string",
-      "Boolean",
-      "null",
-      "undefined",
-      23,
-      44,
-      55,
-      66,
-      4,
-      6,
-      7,
-      8,
-      1,
-      3,
-    ];
-
     expect(getOneSet(dataArray1, dataArray2)).toEqual(expected1);
-    expect(
-      getOneSet(dataArray1, dataArray2, dataArray3, dataArray4, dataArray5)
-    ).toEqual(expected2);
   });
   it("accepts any number of arrays and returns one array with no duplicate values", () => {
     //=== Provided Test Cases ===
@@ -324,7 +321,7 @@ describe("getOneSet", () => {
 // It's a bit cheaty as there are more drawn out ways to complete this but..🤷‍♂️
 // I used a Set object since you cannot have duplicate values in a Set object.
 // I then use the spread operator to turn the Set object into an array. 🫱💨
-//                                                                         🎤
+//                                                                          🎤
 // ------*** This Function accounts for only 2 arrays ***-----------------------
 // const getOneSet = (arr1, arr2) => {
 //   return [...new Set([...arr1, ...arr2])];
