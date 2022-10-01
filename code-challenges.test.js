@@ -96,7 +96,7 @@ const removeAndShuffle = (arr) => {
 
   // loop through filtered array and decrease index every count by one
   for (i; i > 0; i--) {
-    // create random index value and asign it to randomIndex variable
+    // create random index value and assign it to randomIndex variable
     const randomIndex = Math.floor(Math.random() * (i + 1));
 
     // store value of current index of filtered array into temporary variable
@@ -214,7 +214,9 @@ describe("getOneSet", () => {
     //=== Provided Test Cases ===
     const dataArray1 = ["array", "object", "number", "string", "Boolean"];
     const dataArray2 = ["string", "null", "Boolean", "string", "undefined"];
-
+    const dataArray3 = ["string", "null", "Boolean", "string", "undefined"];
+    const dataArray4 = ["array", "object", "number", "string", "Boolean"];
+    const dataArray5 = [23, 44, 55, 66, 66, 55, 23, 23, 4, 4, 6, 7, 8, 1, 3];
     //=== Expected Test Results ===
     const expected1 = [
       "array",
@@ -226,7 +228,61 @@ describe("getOneSet", () => {
       "undefined",
     ];
 
+    const expected2 = [
+      "array",
+      "object",
+      "number",
+      "string",
+      "Boolean",
+      "null",
+      "undefined",
+      23,
+      44,
+      55,
+      66,
+      4,
+      6,
+      7,
+      8,
+      1,
+      3,
+    ];
+
     expect(getOneSet(dataArray1, dataArray2)).toEqual(expected1);
+    expect(
+      getOneSet(dataArray1, dataArray2, dataArray3, dataArray4, dataArray5)
+    ).toEqual(expected2);
+  });
+  it("accepts any number of arrays and returns one array with no duplicate values", () => {
+    //=== Provided Test Cases ===
+    const dataArray1 = ["array", "object", "number", "string", "Boolean"];
+    const dataArray2 = ["string", "null", "Boolean", "string", "undefined"];
+    const dataArray3 = ["string", "null", "Boolean", "string", "undefined"];
+    const dataArray4 = ["array", "object", "number", "string", "Boolean"];
+    const dataArray5 = [23, 44, 55, 66, 66, 55, 23, 23, 4, 4, 6, 7, 8, 1, 3];
+    //=== Expected Test Results ===
+    const expected2 = [
+      "array",
+      "object",
+      "number",
+      "string",
+      "Boolean",
+      "null",
+      "undefined",
+      23,
+      44,
+      55,
+      66,
+      4,
+      6,
+      7,
+      8,
+      1,
+      3,
+    ];
+    expect(
+      getOneSet(dataArray1, dataArray2, dataArray3, dataArray4, dataArray5)
+    ).toEqual(expected2);
   });
 });
 
@@ -263,32 +319,47 @@ describe("getOneSet", () => {
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // b)👨‍💻 Create the function that makes the test pass.
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+//------------------------*** Initial Version ***-------------------------------
 // I decided to to take advantage of the spread operator and the Set object.
 // It's a bit cheaty as there are more drawn out ways to complete this but..🤷‍♂️
-
 // I used a Set object since you cannot have duplicate values in a Set object.
 // I then use the spread operator to turn the Set object into an array. 🫱💨
 //                                                                         🎤
-
-// ------*** This Function accounts for only 2 arrays ***-------
+// ------*** This Function accounts for only 2 arrays ***-----------------------
 // const getOneSet = (arr1, arr2) => {
 //   return [...new Set([...arr1, ...arr2])];
 // };
+//------------------------------------------------------------------------------
 
-//-------*** This is a refactored version ***-------------------
-// this allows any number of arrays to be added as an argument. This is due to
-// the use of the Rest Parameter in conjunction of the Spread Operator.
+//-----------------*** This is a refactored version ***-------------------------
+// This allows any number of arrays to be added as an argument. This is due to
+// the use of the Rest Parameter in conjunction of the Spread Operator. I also
+// used to forEach() method to go through each array, and then each value in the
+// the array to push values into a new array so the values can be applied to the
+// Set object and have the spread operator applied to return the desired output.
+//------------------------------------------------------------------------------
+// const getOneSet = (...arr) => {
+//   let newArr = [];
+//   arr.forEach((array) => array.forEach((value) => newArr.push(value)));
+//   return [...new Set([...newArr])];
+// };
+//------------------------------------------------------------------------------
+
+//---------------*** This is my final refactored version ***--------------------
+// I decided to refactor this problem even more and I went with the Higher Order
+// Function reduce(). This allowed me to return an array of arrays reduced down
+// to one array and then apply the combination of the spread operator and Set
+// object as before from my other versions.
 const getOneSet = (...arr) => {
-  let newArr = [];
-  arr.forEach((array) => array.forEach((value) => newArr.push(value)));
-  return [...new Set([...newArr])];
+  return [
+    ...new Set([
+      ...arr.reduce((arr1, arr2) => {
+        return arr1.concat(arr2);
+      }),
+    ]),
+  ];
 };
-
-const dataArray1 = ["array", "object", "number", "string", "Boolean"];
-const dataArray2 = ["string", "null", "Boolean", "string", "undefined"];
-
-getOneSet(dataArray1, dataArray2);
+//------------------------------------------------------------------------------
 
 //--------------------||✅ Final Test Results ✅||------------------------------
 // PASS  ./code-challenges.test.js
@@ -297,14 +368,15 @@ getOneSet(dataArray1, dataArray2);
 // getTotalVotes
 //   ✓ returns the net total of votes
 // getOneSet
-//   ✓ returns one array with no duplicate values
+//   ✓ returns one array with no duplicate values (1 ms)
+//   ✓ accepts any number of arrays and returns one array with no duplicate values
 
 // Test Suites: 1 passed, 1 total
-// Tests:       3 passed, 3 total
+// Tests:       4 passed, 4 total
 // Snapshots:   0 total
-// Time:        0.19 s, estimated 1 s
+// Time:        0.179 s, estimated 1 s
 // Ran all test suites.
-// ✨  Done in 0.53s.
+// ✨  Done in 0.52s.
 //------------------------------------------------------------------------------
 
 //******************************************************************************
