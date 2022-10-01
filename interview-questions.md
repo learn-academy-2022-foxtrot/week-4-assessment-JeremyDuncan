@@ -73,6 +73,9 @@ Your answer:
 though there is no "return" in the method.
 
 Researched answer:
+* According to: https://medium.com/@bunlong/arrow-functions-return-rules-in-javascript-b63ed5f25994#:~:text=What%20is%20Implicit%20Return%3F,return%20in%20a%20concise%20body:
+  * An implicit return is when a function returns a value without using the return
+keyword.
 
 ---
 <!-- ----------------------------------------------------------------------- -->
@@ -83,6 +86,8 @@ Your answer:
 * Blocks can be inside Methods to allow being called multiple times.
 
 Researched answer:
+* According to: https://engineering.gusto.com/ruby-blocks-simplified/#:~:text=Blocks%20are%20Ruby's%20version%20of,more%20reusable%20and%20less%20verbose:
+  * A block is an anonymous function that will return a value from the method that called it.
 
 ---
 <!-- ----------------------------------------------------------------------- -->
@@ -105,6 +110,8 @@ this_hash = {cherry: 'A small red fruit', jalapeno: 'A spicey addition to any di
 p this_hash[:cherry] # 'A small red fruit'
 ```
 Researched answer:
+* According to: https://thedevpost.com/blog/extract-key-or-value-from-hash-in-ror/:
+  * Another method of extracting a value from a hash is by using the .values method. This will return all the values on the object you apply the method to.
 
 ---
 <!-- ----------------------------------------------------------------------- -->
