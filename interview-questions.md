@@ -59,7 +59,11 @@ the nearest whole number
   * Arithmetic Example: 7/2 = 3 
 
 Researched answer:
-
+According to: https://rails.devcamp.com/trails/ruby-programming/campsites/working-with-numbers-in-ruby/guides/difference-between-integers-and-floats-in-a-ruby-program :
+* You are more likely to use floats in real life applications in databases as 
+compared to integers due to floats being more accurate.
+* Integers are good for things such as ID numbers and when you know you will not
+be performing calculations. 
 ---
 <!-- ----------------------------------------------------------------------- -->
 3. Ruby has an implicit return. What does that mean?
