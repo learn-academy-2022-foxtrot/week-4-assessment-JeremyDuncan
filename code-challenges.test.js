@@ -270,8 +270,19 @@ describe("getOneSet", () => {
 // I used a Set object since you cannot have duplicate values in a Set object.
 // I then use the spread operator to turn the Set object into an array. 🫱💨
 //                                                                         🎤
-const getOneSet = (arr1, arr2) => {
-  return [...new Set([...arr1, ...arr2])];
+
+// ------*** This Function accounts for only 2 arrays ***-------
+// const getOneSet = (arr1, arr2) => {
+//   return [...new Set([...arr1, ...arr2])];
+// };
+
+//-------*** This is a refactored version ***-------------------
+// this allows any number of arrays to be added as an argument. This is due to
+// the use of the Rest Parameter in conjunction of the Spread Operator.
+const getOneSet = (...arr) => {
+  let newArr = [];
+  arr.forEach((array) => array.forEach((value) => newArr.push(value)));
+  return [...new Set([...newArr])];
 };
 
 const dataArray1 = ["array", "object", "number", "string", "Boolean"];
