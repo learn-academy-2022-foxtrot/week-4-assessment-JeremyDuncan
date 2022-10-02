@@ -39,13 +39,22 @@ end
 # modulus. If even? returns true, then return number is even, else return
 # number is odd.
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-def determine_odd_or_even(num)
-  if num.even?
-    "#{num} is even"
-  else 
-    "#{num} is odd"
-  end
-end
+# def determine_odd_or_even(num)
+#   if num.even?
+#     "#{num} is even"
+#   else 
+#     "#{num} is odd"
+#   end
+# end
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~👨‍💻 Compressed Version~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Decided to refactor the code into one line using a ternary operator.
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# def determine_odd_or_even(num)
+#   num.even? ? "#{num} is even" : "#{num} is odd"
+# end
+
+def determine_odd_or_even(num);num.even? ? "#{num} is even":"#{num} is odd";end
 
 #---------------------------||🧪 Test Cases 🧪||--------------------------------
 # Challenege 1, Test 1                    # ---👇Test Explanation👇 ---
@@ -96,9 +105,14 @@ assertEqual(determine_odd_or_even(num3),
 # I used the delete! method to mutate the string and remove all vowels by 
 # passing all vowels, upper and lowercase as an argument
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-def removeVowels(string)
-  string.delete!("aeiouAEIUO") 
-end
+# def removeVowels(string)
+#   string.delete!("aeiouAEIUO") 
+# end
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~👨‍💻 Compressed Version~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Decided to refacror the code into one line.
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+def removeVowels(string);string.delete!("aeiouAEIUO");end
 
 #---------------------------||🧪 Test Cases 🧪||--------------------------------
 # Challenege 2, Test 1
@@ -157,12 +171,21 @@ assertEqual(removeVowels(beatles_album3),
 # if non-reverse string equals reverse string then return it is a palindrome
 # else return not a palindrome 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-def palindrome_checker(string)
-  if string.downcase === string.downcase.reverse
-    "#{string} is a palindrome"
-  else
-    "#{string} is not a palindrome"
-  end
+# def palindrome_checker(string)
+#   if string.downcase === string.downcase.reverse
+#     "#{string} is a palindrome"
+#   else
+#     "#{string} is not a palindrome"
+#   end
+# end
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~👨‍💻 Refactored Version~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Decided to refactor the code using a ternary operator.
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+def palindrome_checker(str)
+  str.downcase === str.downcase.reverse ? 
+  "#{str} is a palindrome" : "#{str} is not a palindrome"
 end
 
 #---------------------------||🧪 Tests Cases 🧪||-------------------------------
