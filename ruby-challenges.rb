@@ -54,7 +54,7 @@ end
 #   num.even? ? "#{num} is even" : "#{num} is odd"
 # end
 
-def determine_odd_or_even(num);num.even? ? "#{num} is even":"#{num} is odd";end
+def determine_odd_or_even(num); num.even? ? "#{num} is even":"#{num} is odd" end
 
 #---------------------------||🧪 Test Cases 🧪||--------------------------------
 # Challenege 1, Test 1                    # ---👇Test Explanation👇 ---
@@ -112,7 +112,7 @@ assertEqual(determine_odd_or_even(num3),
 #~~~~~~~~~~~~~~~~~~~~~~~~~👨‍💻 Compressed Version~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Decided to refacror the code into one line.
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-def removeVowels(string);string.delete!("aeiouAEIUO");end
+def removeVowels(string); string.delete!("aeiouAEIUO") end
 
 #---------------------------||🧪 Test Cases 🧪||--------------------------------
 # Challenege 2, Test 1
