@@ -110,7 +110,7 @@ assertEqual(determine_odd_or_even(num3),
 # end
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~👨‍💻 Compressed Version~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# Decided to refacror the code into one line.
+# Decided to refactor the code into one line.
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 def removeVowels(string); string.delete!("aeiouAEIUO") end
 
